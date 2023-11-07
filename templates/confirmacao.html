@@ -1,0 +1,36 @@
+{% extends 'base.html' %} {% block conteudo %}
+
+<body class="body-background">
+  <div class="container">
+    <div class="index-button">
+      <button class="index-botao-voltar">
+        <a href="/area_logada"><img src="../static/assets/img/seta.png" alt="voltar-index" /></a>
+      </button>
+    </div>
+    <div class="container-pop">
+      <div class="pop-up">
+        <div class="conteudo-HangLoose">
+          <img class="icon-HangLoose" src="../static/assets/img/iconVerde.png" alt="hangLoose" />
+        </div>
+
+        <div class="conteudo-principal-confirmacao">
+          <h1 class="conteudo-confirmacao-titulo">Obrigado por se cadastrar!</h1>
+          <p class="conteudo-confirmacao-paragrafo">
+            Olá {{ name }}, em breve alguém da nossa equipe entrara em contato no
+            e-mail {{ email }}!
+          </p>
+
+          {% if accept_whatsapp %}
+          <p class="conteudo-confirmacao-paragrafo">
+            Você autorizou o contato por whatsapp!
+          </p>
+          {% endif %}
+        </div>
+        <div class="botoes-pop-up">
+          <a href="{{ url_for('contato') }}"><button class="botao-pop-up">Voltar ao formulário</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+{% endblock %}

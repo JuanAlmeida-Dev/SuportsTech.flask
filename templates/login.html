@@ -1,0 +1,46 @@
+{% extends 'base.html' %} {% block conteudo %}
+
+<body class="body-background">
+  <div class="container-login">
+    <div class="index-button">
+      <button class="index-botao-voltar">
+        <a href="/home"><img src="../static/assets/img/seta.png" alt="voltar-index" /></a>
+      </button>
+    </div>
+    <div class="form">
+      <form class="formulario-login" method="POST">
+        <div class="cabecalho-logo">
+          <h4><a class="cabecalho-logo-a" href="/">Suports Tech</a></h4>
+        </div>
+        <h1 class="formulario-title">Sign-in</h1>
+
+        <!-- Campo Email -->
+        <label class="label-nome" for="log_email">Email:</label>
+        <input class="input-nome" type="email" id="log_email" name="log_email" required />
+        {% if mensagem_email %}
+        <p class="mensagem_email">{{ mensagem_email }}</p>
+        {% endif %}
+
+        <!-- Campo Senha -->
+        <label class="label-senha" for="log_senha">Senha:</label>
+        <input class="input-senha" type="password" id="log_senha" name="log_senha" required />
+        {% if mensagem_senha %}
+        <p class="mensagem_senha">{{ mensagem_senha }}</p>
+        {% endif %}
+
+        <div class="form-botoes">
+          <button class="form-botoes-submit" type="submit">Sign-in</button>
+        </div>
+
+        <div class="create-account">
+          <p>
+            Não tem uma conta?
+            <a class="create-account-a" href="/cadastro">Cadastre-se</a>
+          </p>
+        </div>
+      </form>
+      <p id="mensagem-erro"></p>
+    </div>
+  </div>
+</body>
+{% endblock %}

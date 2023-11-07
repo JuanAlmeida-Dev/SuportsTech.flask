@@ -1,0 +1,94 @@
+{% extends 'base.html' %} {% block conteudo %}
+
+<body class="body-contato">
+  <div class="container-contato">
+    <div class="index-button">
+      <button class="index-botao-voltar">
+        <a href="/area_logada"><img src="../static/assets/img/seta.png" alt="voltar-index" /></a>
+      </button>
+    </div>
+    <div class="form">
+      <form class="formulario-contato" method="post" action="/confirmacao">
+        <h1 class="formulario-title">Fale conosco</h1>
+
+        <!-- Campo Nome -->
+        <label class="label-nome" for="nome">Nome:</label>
+        <input class="input-nome" type="text" id="nome" name="nome" required />
+
+        <!-- Campo Email -->
+        <label class="label-email" for="email">E-mail:</label>
+        <input class="input-email" type="email" id="email" name="email" required />
+
+        <!-- Campo Telefone  -->
+        <label class="label-telefone" for="telefone">Telefone:</label>
+        <input class="label-telefone" type="number" id="telefone" name="telefone" required />
+
+        <!-- Campo Assunto -->
+        <label class="label-assunto" for="assunto">Assunto:</label>
+        <select class="select-assunto" name="assunto" id="assunto" required>
+          <option>Selecione uma opção</option>
+          <option value="1">Atendimento ao cliente</option>
+          <option value="2">Recuperação de Senha</option>
+          <option value="3">Atualizações</option>
+          <option value="4">Suportes</option>
+          <option value="5">Backups</option>
+        </select>
+
+        <!-- Campo Mensagem -->
+        <label class="label-mensagem" for="mensagem">Mensagem:</label>
+        <textarea class="text-mensaegm" name="mensagem" id="mensagem" rows="4" placeholder="Digite aqui sua mensagem"
+          minlength="1" maxlength="500" required></textarea>
+
+        <!-- Campo Check -->
+        <fieldset class="field-check">
+          <legend class="field-check-legend">Como nos conheceu?</legend>
+
+          <div class="radio-google">
+            <input class="label-google" type="radio" id="google" name="option" value="1" />
+            <label class="input-google" for="google">GoogleAds</label>
+          </div>
+
+          <div class="radio-insta">
+            <input class="input-insta" type="radio" id="insta" name="option" value="2" />
+            <label class="label-insta" for="insta">Insta</label>
+          </div>
+
+          <div class="radio-podcasts">
+            <input class="input-podcasts" type="radio" id="podcasts" name="option" value="3" />
+            <label class="label-podcasts" for="podcasts">Podcasts</label>
+          </div>
+
+          <div class="radio-tv">
+            <input class="input-tv" type="radio" id="tv" name="option" value="4" />
+            <label class="label-tv" for="tv">TV</label>
+          </div>
+
+          <div class="radio-amigos">
+            <input class="input-amigos" type="radio" id="amigos" name="option" value="5" />
+            <label class="label-amigos" for="amigos">Amigos</label>
+          </div>
+
+          <div class="radio-outros">
+            <input class="input-outros" type="radio" id="outros" name="option" value="6" />
+            <label class="label-outros" for="outros">Outros</label>
+          </div>
+        </fieldset>
+
+        <div class="checkbox-whats">
+          <input class="checkbox-whats-input" type="checkbox" id="whats" name="accept-whatsapp" />
+          <label class="checkbox-whats-label" for="whats">Aceito receber comunicação por whatsapp</label>
+        </div>
+
+        <div class="form-botoes">
+          <button class="form-botoes-reset" type="reset">Limpar</button>
+          <button class="form-botoes-submit" type="submit">Enviar</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="divImagem">
+      <img src="../static/assets/img/imgContato.svg" alt="imgContato" />
+    </div>
+  </div>
+</body>
+{% endblock %}

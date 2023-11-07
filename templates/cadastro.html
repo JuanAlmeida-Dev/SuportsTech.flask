@@ -1,0 +1,50 @@
+{% extends 'base.html' %} {% block conteudo %}
+
+<body class="body-background">
+    <div class="container-cadastro">
+        <div class="index-button">
+            <button class="index-botao-voltar">
+                <a href="/"><img src="../static/assets/img/seta.png" alt="voltar-index" /></a>
+            </button>
+        </div>
+        <div class="form">
+            <form class="formulario-cadastro" method="POST">
+                <h1 class="formulario-title">Criar Conta</h1>
+
+                <!-- Campo Nome -->
+                <label class="label-nome" for="nome-cad">Nome:</label>
+                <input class="input-nome" type="text" id="nome-cad" name="cad_nome" required />
+
+                <!-- Campo Email -->
+                <label class="label-email" for="email-cad">E-mail:</label>
+                <input class="input-email" type="email" id="email-cad" name="cad_email" required />
+                {% if mensagem_email %}
+                <p class="mensagem_email">{{ mensagem_email }}</p>
+                {% endif %}
+
+
+                <!-- Campo Senha -->
+                <label class="label-senha" for="senha-cad">Senha:</label>
+                <input class="input-senha" type="password" id="senha-cad" name="cad_senha" required />
+
+                <!-- Campo Confirmação Senha -->
+                <label class="label-confSenha" for="confirma_senha">Confirme a Senha:</label>
+                <input class="input-confSenha" type="password" id="confirma_senha" name="confirma_senha" required />
+                {% if mensagem_senha %}
+                <p class="mensagem_senha">{{ mensagem_senha }}</p>
+                {% endif %}
+
+
+                <div class="form-botoes">
+                    <button class="form-botoes-reset" type="reset">Limpar</button>
+                    <button class="form-botoes-submit" type="submit">Cadastrar</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="divImagem">
+            <img src="../static/assets/img/Sign-in.svg" alt="imgContato" />
+        </div>
+    </div>
+</body>
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends 'base.html' %} {% block conteudo %}
+
+<body class="body-background">
+    <header class="cabecalho">
+        <div class="navbar">
+            <nav class="cabecalho-menu-logogado">
+                <div class="cabecalho-logo">
+                    <h4><a class="cabecalho-logo-a" href="/area_logada">Suports Tech</a></h4>
+                </div>
+                <ul class="nav-links-logado">
+                    <li class="cabecalho-menu-item-logado">
+                        <a class="cabecalho-menu-item-a-logado" href="/area_logada">Home</a>
+                    </li>
+                    <li class="cabecalho-menu-item-logado">
+                        <a class="cabecalho-menu-item-a-logado" href="{{ url_for('contato') }}">Contato</a>
+                    </li>
+
+                    <li class="dropdown">
+                        <a class="cabecalho-menu-item-a-logado" href="javascript:void(0)">{{ usuario.nome }}</a>
+                        <div class="dropdown-content">
+                            <a class="cabecalho-menu-item-a" href="/logout">Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="conteudo">
+        <section class="conteudo-principal-section">
+            <div class="conteudo-principal">
+                <div class="conteudo-principal-escrito">
+                    <h1 class="conteudo-principal-titulo">Bem-vindo(a), {{ usuario.nome }}!</h1>
+                    <p class="conteudo-principal-subtitulo">
+                        Suports tech pronta para te atender 24h por dia!
+                    </p>
+                    <a class="conteudo-principal-link-butao" href="{{ url_for('contato') }}"><button
+                            class="conteudo-principal-botao">Saiba mais!</button></a>
+                </div>
+                <div class="conteudo-principal-imagem">
+                    <img src="../static/assets/img/imgIndex.svg" alt="imgIndex" />
+                </div>
+            </div>
+        </section>
+
+        <section class="conteudo-secundario">
+            <h1 class="conteudo-secundario-titulo">O que fazemos por você?</h1>
+            <p class="conteudo-paragrafo">
+                1. Solução dos chamados dos funcionários, sobre a utilização de
+                determinada <strong>solução e recuperação de senhas</strong> até
+                problemas de acessos e no funcionamento dos equipamentos.
+            </p>
+            <p class="conteudo-paragrafo">
+                2. Correção de problemas na infraestrutura, como configuração das redes
+                e servidores, recuperação de informações e estabelecimento de um plano
+                de <strong>backup na nuvem</strong>.
+            </p>
+            <p class="conteudo-paragrafo">
+                3. Atualização, estabilidade e disponibilidade de
+                <strong>todos os recursos que envolvem tecnologia</strong>, como
+                software e hardware.
+            </p>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <h4 class="rodape-h4">Desenvolvido &copy; Suports Tech</h4>
+    </footer>
+</body>
+{% endblock %}

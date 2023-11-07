@@ -1,0 +1,440 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600&family=Roboto:wght@300;400;500&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.body-background {
+  font-size: 100%;
+  background-image: linear-gradient(45deg, black, #221133);
+  height: 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.cabecalho-menu, .cabecalho-menu-logogado {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  font-family: "Roboto", sans-serif;
+}
+
+.cabecalho-logo {
+  color: rgb(226, 226, 226);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 20px;
+  padding: 30px;
+  font-family: "Orbitron", sans-serif;
+  text-align: center;
+}
+
+.cabecalho-logo-a {
+  color: rgb(226, 226, 226);
+}
+
+.nav-links, .nav-links-logado {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+
+.cabecalho-menu-item, .cabecalho-menu-item-logado{
+  list-style: none;
+}
+
+.cabecalho-menu-item-a, .cabecalho-menu-item-a-logado{
+  color: rgb(226, 226, 226);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.cabecalho-menu-item-a:hover, .cabecalho-menu-item-a-logado:hover {
+  color: #ba68c8;
+  cursor: pointer;
+}
+
+.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #221133;
+  min-width: 60px;
+  box-shadow: 4px 5px 4px rgba(169, 169, 169, 0.25);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.conteudo {
+  border-top: 0.4px solid rgb(226, 226, 226);
+}
+
+.conteudo-principal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.conteudo-principal-escrito {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.conteudo-principal-titulo {
+  font-weight: 400;
+  font-size: 50px;
+  color: rgb(226, 226, 226);
+  margin: auto;
+  font-family: "Orbitron", sans-serif;
+}
+
+.conteudo-principal-subtitulo {
+  font-weight: 400;
+  font-size: 19px;
+  color: rgb(226, 226, 226);
+  margin: auto;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+.conteudo-principal-link-butao {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.conteudo-principal-botao {
+  background-color: rgb(226, 226, 226);
+  height: 50px;
+  width: 180px;
+  border: none;
+  border-radius: 5px;
+  margin: auto;
+  box-shadow: 4px 5px 4px rgba(169, 169, 169, 0.25);
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  background-color: #ba68c8;
+  color: white;
+}
+
+.conteudo-principal-botao:hover {
+  background-color: rgb(200 134 211);
+  cursor: pointer;
+}
+
+.conteudo-principal-imagem {
+  width: 500px;
+}
+
+.conteudo-secundario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  margin: 50px;
+  padding: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+.conteudo-secundario-titulo {
+  font-weight: 400;
+  font-size: 30px;
+  color: rgb(226, 226, 226);
+  margin: auto;
+  padding-top: 30px;
+  border-top: 0.4px solid rgb(226, 226, 226);
+  font-family: "Orbitron", sans-serif;
+}
+
+.conteudo-paragrafo {
+  font-weight: 300;
+  font-size: 15.3px;
+  color: rgb(226, 226, 226);
+  margin: auto;
+}
+
+.rodape {
+  border-top: 0.4px solid rgb(226, 226, 226);
+  padding: 30px;
+}
+
+.rodape-h4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(226, 226, 226);
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+/* Sytle Contato */
+.container-contato, .container-cadastro, .container-login {
+  display: flex;
+  flex-direction: row;
+  font-family: "Roboto", sans-serif;
+}
+
+.form {
+  width: 500px;
+  padding: 10px;
+  box-sizing: content-box;
+  margin: auto;
+}
+
+.formulario-title {
+  text-align: center;
+  font-size: 2em;
+  font-weight: 300;
+  margin-bottom: 20px;
+  color: #ba68c8;
+}
+
+.formulario-login input{
+  margin-bottom: 30px;
+}
+
+.formulario-cadastro input, .formulario-login input{
+  padding: 5px;
+  background-color: #190c25;
+  height: 30px;
+  margin-top: 10px;
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+.formulario-contato label{
+  font-size: 13px;
+  color: #4a4a4a;
+}
+
+.formulario-cadastro label, .formulario-login label{
+  font-size: 13px;
+  color: white;
+}
+
+.form input, select {
+  border-bottom: solid 1px #d3d3d3;
+}
+
+.form textarea, fieldset {
+  border: solid 1px #d3d3d3;
+}
+
+.form textarea,
+input,
+select {
+  width: 100%;
+  margin-bottom: 15px;
+  outline: none;
+}
+
+.field-check {
+  display: flex;
+}
+
+.field-check div {
+  display: flex;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.field-check input[type="radio"] {
+  appearance: none;
+  border: solid 1px #ba68c8;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  margin-right: 5px;
+  background-color: white;
+}
+
+.field-check input[type="radio"]:checked {
+  background-image: radial-gradient(white 35%, #ba68c8 45%);
+}
+
+.checkbox-whats {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  justify-content: flex-end;
+}
+
+.checkbox-whats-input {
+  width: 10%;
+}
+
+.checkbox-whats input[type="checkbox"] {
+  appearance: none;
+  border: solid 1px #ba68c8;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 2px;
+  margin-right: 5px;
+  background-color: white;
+}
+
+.checkbox-whats input[type="checkbox"]:checked {
+  content: url(assets/img/icon-check.svg);
+  background-color: #ba68c8;
+}
+
+.form-botoes {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
+}
+
+.form-botoes button {
+  width: 100px;
+  height: 30px;
+  border-radius: 15px;
+  padding: 0.2 2.5;
+  font-weight: bold;
+  color: white;
+}
+
+.form-botoes-reset {
+  background-color: #37474f;
+}
+
+.form-botoes-reset:hover {
+  background-color: #758187;
+  cursor: pointer;
+}
+
+.form-botoes-submit {
+  background-color: #ba68c8;
+}
+
+.form-botoes-submit:hover {
+  background-color: #cf95d8;
+  cursor: pointer;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.divImagem {
+  width: 50vw;
+  height: 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: linear-gradient(45deg, black, #221133);
+  display: flex;
+  justify-content: center;
+}
+
+.divImagem img {
+  width: 500px;
+}
+
+.pop-up {
+  width: 500px;
+  height: 300px;
+  background-color: azure;
+  font-family: "Roboto", sans-serif;
+}
+
+.container-pop{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Sytle Confirmação */
+.pop-up {
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.conteudo-HangLoose {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.conteudo-principal-confirmacao {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+}
+
+.botoes-pop-up {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.botao-pop-up {
+  background-color: #ba68c8;
+  width: 150px;
+  height: 30px;
+  border-radius: 15px;
+  color: white;
+  padding: 5px;
+}
+
+.botao-pop-up:hover {
+  background-color: #cf95d8;
+  cursor: pointer;
+}
+
+.index-botao-voltar {
+  margin-top: 10px;
+  margin-left: 10px;
+  background-color: transparent;
+  position: absolute;
+}
+
+/* Style Login */
+
+.create-account{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 30px;
+  border: solid 1px #758187;
+  border-radius: 5px;
+  height: 40px;
+  padding: 10px;
+  color: white;
+}
+
+.create-account-a:hover{
+  color: #cf95d8;
+
+}
+
+.mensagem_email, .mensagem_senha{
+  color: white;
+}
